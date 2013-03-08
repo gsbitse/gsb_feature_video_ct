@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the GSB Feature Video Content Type feature.
+ */
+
+include_once 'gsb_feature_video_ct.features.inc';
