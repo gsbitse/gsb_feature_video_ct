@@ -24,12 +24,12 @@ function gsb_feature_video_ct_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_business_insight_topic',
-      1 => 'field_target_audience',
+      1 => 'field_company_organization',
       2 => 'field_discipline',
       3 => 'field_industry',
       4 => 'field_region',
-      5 => 'field_company_organization',
-      6 => 'field_tag',
+      5 => 'field_tag',
+      6 => 'field_target_audience',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
