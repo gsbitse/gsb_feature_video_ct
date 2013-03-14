@@ -464,7 +464,7 @@ function gsb_feature_video_ct_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_editorial_summary',
       'label' => 'Editorial Summary',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'linkit' => array(
           'enable' => 0,
