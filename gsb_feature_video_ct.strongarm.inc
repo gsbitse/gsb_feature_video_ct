@@ -50,13 +50,13 @@ function gsb_feature_video_ct_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
-        ),
-        'workbench_access' => array(
           'weight' => '6',
         ),
-        'flag' => array(
+        'workbench_access' => array(
           'weight' => '7',
+        ),
+        'flag' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),
