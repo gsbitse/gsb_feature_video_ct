@@ -47,16 +47,19 @@ function gsb_feature_video_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'workbench_access' => array(
-          'weight' => '6',
+          'weight' => '0',
         ),
         'flag' => array(
           'weight' => '7',
+        ),
+        'metatags' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),

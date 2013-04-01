@@ -14,7 +14,7 @@ function gsb_feature_video_ct_field_default_fields() {
   $fields['node-gsb_video-field_business_insight_topic'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_business_insight_topic',
@@ -92,9 +92,11 @@ function gsb_feature_video_ct_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'module' => 'hs_taxonomy',
+        'settings' => array(
+          'maxlength_js_label' => '',
+        ),
+        'type' => 'taxonomy_hs',
         'weight' => '8',
       ),
       'workbench_access_field' => 0,
@@ -186,6 +188,7 @@ function gsb_feature_video_ct_field_default_fields() {
         'module' => 'taxonomy',
         'settings' => array(
           'autocomplete_path' => 'taxonomy/autocomplete',
+          'maxlength_js_label' => '',
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
@@ -218,6 +221,7 @@ function gsb_feature_video_ct_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
+        'repeat' => '0',
         'timezone_db' => '',
         'todate' => '',
         'tz_handling' => 'none',
@@ -239,6 +243,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'multiple_from' => '',
             'multiple_number' => '',
             'multiple_to' => '',
+            'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
           'weight' => '2',
@@ -264,6 +269,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'multiple_from' => '',
             'multiple_number' => '',
             'multiple_to' => '',
+            'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
           'weight' => '3',
@@ -278,7 +284,7 @@ function gsb_feature_video_ct_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_date_published',
       'label' => 'Date Published',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'default_value' => 'now',
         'default_value2' => 'same',
@@ -290,15 +296,18 @@ function gsb_feature_video_ct_field_default_fields() {
         'active' => 1,
         'module' => 'date',
         'settings' => array(
+          'display_all_day' => 0,
           'increment' => '15',
           'input_format' => 'Y-m-d H:i:s',
           'input_format_custom' => '',
           'label_position' => 'above',
+          'maxlength_js_label' => '',
+          'repeat_collapsed' => 0,
           'text_parts' => array(),
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '3',
+        'weight' => '2',
       ),
       'workbench_access_field' => 0,
     ),
@@ -308,7 +317,7 @@ function gsb_feature_video_ct_field_default_fields() {
   $fields['node-gsb_video-field_discipline'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_discipline',
@@ -386,9 +395,11 @@ function gsb_feature_video_ct_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'module' => 'hs_taxonomy',
+        'settings' => array(
+          'maxlength_js_label' => '',
+        ),
+        'type' => 'taxonomy_hs',
         'weight' => '10',
       ),
       'workbench_access_field' => 0,
@@ -477,10 +488,131 @@ function gsb_feature_video_ct_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '5',
+          'maxlength_js' => '150',
+          'maxlength_js_enforce' => 0,
+          'maxlength_js_label' => 'Editorial Summary is limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'maxlength_js_truncate_html' => 0,
+          'rows' => '3',
         ),
         'type' => 'text_textarea',
-        'weight' => '2',
+        'weight' => '3',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'node-gsb_video-field_file_single_public'.
+  $fields['node-gsb_video-field_file_single_public'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_file_single_public',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'gsb_video',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 10,
+        ),
+        'featured' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'tiny' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_file_single_public',
+      'label' => 'Video',
+      'required' => 1,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'txt',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'private' => 0,
+            'public' => 0,
+            'vimeo' => 'vimeo',
+            'youtube' => 'youtube',
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 0,
+            'video' => 'video',
+          ),
+          'browser_plugins' => array(
+            'gsb_media_browser--files_and_docs' => 0,
+            'gsb_media_browser--images' => 0,
+            'gsb_media_browser--videos' => 0,
+            'gsb_media_center_document' => 0,
+            'gsb_media_center_image' => 0,
+            'gsb_media_center_video' => 'gsb_media_center_video',
+            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_my_files' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+          ),
+          'maxlength_js_label' => '',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'media_generic',
+        'weight' => '4',
       ),
       'workbench_access_field' => 0,
     ),
@@ -490,7 +622,7 @@ function gsb_feature_video_ct_field_default_fields() {
   $fields['node-gsb_video-field_industry'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_industry',
@@ -568,9 +700,11 @@ function gsb_feature_video_ct_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'module' => 'hs_taxonomy',
+        'settings' => array(
+          'maxlength_js_label' => '',
+        ),
+        'type' => 'taxonomy_hs',
         'weight' => '11',
       ),
       'workbench_access_field' => 0,
@@ -581,7 +715,7 @@ function gsb_feature_video_ct_field_default_fields() {
   $fields['node-gsb_video-field_region'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_region',
@@ -659,9 +793,11 @@ function gsb_feature_video_ct_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'module' => 'hs_taxonomy',
+        'settings' => array(
+          'maxlength_js_label' => '',
+        ),
+        'type' => 'taxonomy_hs',
         'weight' => '12',
       ),
       'workbench_access_field' => 0,
@@ -753,10 +889,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'module' => 'taxonomy',
         'settings' => array(
           'autocomplete_path' => 'taxonomy/autocomplete',
+          'maxlength_js_label' => '',
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '14',
+        'weight' => '15',
       ),
       'workbench_access_field' => 0,
     ),
@@ -766,7 +903,7 @@ function gsb_feature_video_ct_field_default_fields() {
   $fields['node-gsb_video-field_target_audience'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_target_audience',
@@ -842,135 +979,13 @@ function gsb_feature_video_ct_field_default_fields() {
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 0,
-        'module' => 'taxonomy',
-        'settings' => array(
-          'autocomplete_path' => 'taxonomy/autocomplete',
-          'size' => 60,
-        ),
-        'type' => 'taxonomy_autocomplete',
-        'weight' => '9',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-gsb_video-field_video'.
-  $fields['node-gsb_video-field_video'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_video',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'file',
-      'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'file',
-    ),
-    'field_instance' => array(
-      'bundle' => 'gsb_video',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'file_entity',
-          'settings' => array(
-            'file_view_mode' => 'default',
-          ),
-          'type' => 'file_rendered',
-          'weight' => '1',
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'file_entity',
-          'settings' => array(
-            'file_view_mode' => 'default',
-          ),
-          'type' => 'file_rendered',
-          'weight' => '0',
-        ),
-        'tiny' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_video',
-      'label' => 'Video',
-      'required' => 0,
-      'settings' => array(
-        'description_field' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'txt',
-        'max_filesize' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'hs_taxonomy',
         'settings' => array(
-          'allowed_schemes' => array(
-            'private' => 'private',
-            'public' => 'public',
-            'vimeo' => 'vimeo',
-            'youtube' => 'youtube',
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'document' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(
-            'gsb_media_browser--files_and_docs' => 0,
-            'gsb_media_browser--images' => 0,
-            'gsb_media_browser--videos' => 0,
-            'gsb_media_center_document' => 0,
-            'gsb_media_center_image' => 0,
-            'gsb_media_center_video' => 0,
-            'media_default--media_browser_1' => 0,
-            'media_default--media_browser_my_files' => 0,
-            'media_internet' => 0,
-            'upload' => 0,
-          ),
-          'progress_indicator' => 'throbber',
+          'maxlength_js_label' => '',
         ),
-        'type' => 'media_generic',
-        'weight' => '1',
+        'type' => 'taxonomy_hs',
+        'weight' => '9',
       ),
       'workbench_access_field' => 0,
     ),

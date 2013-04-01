@@ -26,7 +26,7 @@ function gsb_feature_video_ct_node_info() {
     'gsb_video' => array(
       'name' => t('Video'),
       'base' => 'node_content',
-      'description' => t('The GSB Public Video content type is used for videos on the GSB Public web site.'),
+      'description' => t('Adds a video. Currently only used for Business Insights.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
