@@ -538,11 +538,15 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 10,
+          'label' => 'hidden',
+          'module' => 'gsb_field_formatter',
+          'settings' => array(
+            'conditions' => array(),
+            'file_view_mode' => 'default',
+            'preview_view_mode' => 'preview',
+          ),
+          'type' => 'gsb_field_formatter_responsive_video',
+          'weight' => '10',
         ),
         'featured' => array(
           'label' => 'above',
