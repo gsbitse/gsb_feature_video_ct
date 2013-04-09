@@ -51,11 +51,13 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => '5',
         ),
         'featured' => array(
           'label' => 'above',
@@ -72,9 +74,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => '10',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -144,11 +148,13 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'featured' => array(
           'label' => 'above',
@@ -165,9 +171,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '7',
+          'weight' => '13',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -221,7 +229,7 @@ function gsb_feature_video_ct_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
-        'repeat' => '0',
+        'repeat' => 0,
         'timezone_db' => '',
         'todate' => '',
         'tz_handling' => 'none',
@@ -235,9 +243,10 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'date',
           'settings' => array(
+            'conditions' => array(),
             'format_type' => 'long',
             'fromto' => 'both',
             'multiple_from' => '',
@@ -264,6 +273,7 @@ function gsb_feature_video_ct_field_default_fields() {
           'label' => 'hidden',
           'module' => 'date',
           'settings' => array(
+            'conditions' => array(),
             'format_type' => 'long',
             'fromto' => 'both',
             'multiple_from' => '',
@@ -272,7 +282,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => '3',
+          'weight' => '7',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -354,11 +364,13 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'featured' => array(
           'label' => 'above',
@@ -375,9 +387,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => '11',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -440,11 +454,13 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'text_plain',
+          'weight' => '4',
         ),
         'featured' => array(
           'label' => 'above',
@@ -461,9 +477,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '2',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'text_plain',
+          'weight' => '8',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -546,7 +564,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'preview_view_mode' => 'preview',
           ),
           'type' => 'gsb_field_formatter_responsive_video',
-          'weight' => '10',
+          'weight' => '0',
         ),
         'featured' => array(
           'label' => 'above',
@@ -561,10 +579,15 @@ function gsb_feature_video_ct_field_default_fields() {
           'weight' => 0,
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'gsb_field_formatter',
+          'settings' => array(
+            'conditions' => array(),
+            'file_view_mode' => 'default',
+            'preview_view_mode' => 'preview',
+          ),
+          'type' => 'gsb_field_formatter_responsive_video',
+          'weight' => '0',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -663,11 +686,13 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'featured' => array(
           'label' => 'above',
@@ -684,9 +709,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '8',
+          'weight' => '14',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -756,11 +783,13 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '7',
+          'weight' => '8',
         ),
         'featured' => array(
           'label' => 'above',
@@ -777,9 +806,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '1',
+          'weight' => '9',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -849,11 +880,13 @@ function gsb_feature_video_ct_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'featured' => array(
           'label' => 'above',
@@ -870,9 +903,11 @@ function gsb_feature_video_ct_field_default_fields() {
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
+          'weight' => '12',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -945,10 +980,9 @@ function gsb_feature_video_ct_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'featured' => array(
           'label' => 'above',
@@ -966,7 +1000,7 @@ function gsb_feature_video_ct_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '8',
         ),
         'tiny' => array(
           'label' => 'above',

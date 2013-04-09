@@ -43,6 +43,12 @@ function gsb_feature_video_ct_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'megamenu' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
