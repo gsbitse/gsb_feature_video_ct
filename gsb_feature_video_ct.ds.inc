@@ -18,7 +18,7 @@ function gsb_feature_video_ct_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '6',
+      'weight' => '8',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -67,8 +67,8 @@ function gsb_feature_video_ct_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'field_file_single_public',
         1 => 'group_content_wrapper',
-        2 => 'title',
-        3 => 'field_date_published',
+        2 => 'field_date_published',
+        3 => 'title',
         4 => 'field_editorial_summary',
         5 => 'field_region',
         6 => 'field_business_insight_topic',
@@ -81,8 +81,8 @@ function gsb_feature_video_ct_ds_layout_settings_info() {
     'fields' => array(
       'field_file_single_public' => 'ds_content',
       'group_content_wrapper' => 'ds_content',
-      'title' => 'ds_content',
       'field_date_published' => 'ds_content',
+      'title' => 'ds_content',
       'field_editorial_summary' => 'ds_content',
       'field_region' => 'ds_content',
       'field_business_insight_topic' => 'ds_content',

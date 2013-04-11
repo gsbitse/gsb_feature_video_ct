@@ -78,7 +78,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '10',
+          'weight' => '11',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -175,7 +175,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '13',
+          'weight' => '14',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -391,7 +391,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '11',
+          'weight' => '12',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -481,7 +481,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'text_plain',
-          'weight' => '8',
+          'weight' => '9',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -713,7 +713,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '14',
+          'weight' => '15',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -810,7 +810,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '9',
+          'weight' => '10',
         ),
         'tiny' => array(
           'label' => 'above',
@@ -907,7 +907,7 @@ function gsb_feature_video_ct_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '12',
+          'weight' => '13',
         ),
         'tiny' => array(
           'label' => 'above',
