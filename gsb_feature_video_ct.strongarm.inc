@@ -49,6 +49,12 @@ function gsb_feature_video_ct_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'business_insight' => array(
+        'custom_settings' => FALSE,
+      ),
+      'people_fpp' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -56,7 +62,7 @@ function gsb_feature_video_ct_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'workbench_access' => array(
           'weight' => '0',

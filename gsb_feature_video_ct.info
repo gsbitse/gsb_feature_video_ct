@@ -5,6 +5,8 @@ package = GSB
 php = 5.2.4
 version = 7.x-1.0
 project = gsb_feature_video_ct
+dependencies[] = addthis
+dependencies[] = addthis_displays
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = ds
@@ -20,7 +22,7 @@ dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
-datestamp = 1364783561
+datestamp = 1366773991
 features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
@@ -30,6 +32,7 @@ features[features_api][] = api:1
 features[field_group][] = group_content_wrapper|node|gsb_video|default
 features[field_group][] = group_content_wrapper|node|gsb_video|teaser
 features[field_group][] = group_taxonomy|node|gsb_video|form
+features[field_instance][] = node-gsb_video-field_addthis
 features[field_instance][] = node-gsb_video-field_business_insight_topic
 features[field_instance][] = node-gsb_video-field_company_organization
 features[field_instance][] = node-gsb_video-field_date_published
@@ -54,10 +57,4 @@ features_exclude[taxonomy][industry] = industry
 features_exclude[taxonomy][region] = region
 features_exclude[taxonomy][tag] = tag
 features_exclude[taxonomy][target_audience] = target_audience
-
-
-; Information added by drush on 2013-04-19
-version = "master-dev"
-project = "gsb_feature_video_ct"
-datestamp = "1366432588"
-
+features_exclude[field][node-gsb_video-field_addthis] = node-gsb_video-field_addthis

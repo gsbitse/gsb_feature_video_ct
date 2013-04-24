@@ -21,7 +21,7 @@ function gsb_feature_video_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content wrapper',
-    'weight' => '4',
+    'weight' => '1',
     'children' => array(
       0 => 'field_business_insight_topic',
       1 => 'field_company_organization',
@@ -31,7 +31,6 @@ function gsb_feature_video_ct_field_group_info() {
       5 => 'field_industry',
       6 => 'field_region',
       7 => 'field_tag',
-      8 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
