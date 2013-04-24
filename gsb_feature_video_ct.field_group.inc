@@ -31,6 +31,7 @@ function gsb_feature_video_ct_field_group_info() {
       5 => 'field_industry',
       6 => 'field_region',
       7 => 'field_tag',
+      8 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
