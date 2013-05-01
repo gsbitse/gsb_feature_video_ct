@@ -125,10 +125,11 @@ function gsb_feature_video_ct_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_business_insight_topic',
     'label' => 'Business Insight Topic',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
