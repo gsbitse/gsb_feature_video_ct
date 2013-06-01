@@ -660,6 +660,80 @@ function gsb_feature_video_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-gsb_video-field_search_field'
+  $field_instances['node-gsb_video-field_search_field'] = array(
+    'bundle' => 'gsb_video',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'concat_field',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'concat_field_blank',
+        'weight' => 11,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tiny' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_search_field',
+    'label' => 'Search field',
+    'required' => 0,
+    'settings' => array(
+      'selected_fields' => array(
+        'concat_field_entity_label' => 'concat_field_entity_label',
+        'field_addthis' => 0,
+        'field_business_insight_topic' => 'field_business_insight_topic',
+        'field_company_organization' => 'field_company_organization',
+        'field_date_published' => 'field_date_published',
+        'field_discipline' => 'field_discipline',
+        'field_editorial_summary' => 'field_editorial_summary',
+        'field_file_single_public' => 0,
+        'field_industry' => 'field_industry',
+        'field_region' => 'field_region',
+        'field_tag' => 'field_tag',
+        'field_target_audience' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'concat_field',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'concat_field_default',
+      'weight' => 16,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-gsb_video-field_tag'
   $field_instances['node-gsb_video-field_tag'] = array(
     'bundle' => 'gsb_video',
@@ -799,6 +873,7 @@ function gsb_feature_video_ct_field_default_field_instances() {
   t('Editorial Summary');
   t('Industry');
   t('Region');
+  t('Search field');
   t('Tag');
   t('Target Audience');
   t('Video');
